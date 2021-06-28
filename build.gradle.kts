@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.oasis.mlib"
-version = "v0.0.1"
+version = "v3.0.0"
 
 repositories {
     mavenCentral()
