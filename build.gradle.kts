@@ -4,10 +4,20 @@ plugins {
     kotlin("jvm") version "1.5.10"
     `java-library`
     `maven-publish`
+    `java-gradle-plugin`
 }
 
 group = "com.oasis.mlib"
 version = "v3.0.0"
+
+gradlePlugin {
+    plugins {
+        create("oasisDistributionPlugin") {
+            id = "com.oasis.gradle.distribution"
+            implementationClass = "com.oasis.mlib.utils.GradlePlugin"
+        }
+    }
+}
 
 repositories {
     mavenCentral()
