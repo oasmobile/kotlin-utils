@@ -8,7 +8,11 @@ plugins {
 }
 
 group = "com.oasis.mlib"
-version = "v3.0.0"
+version = "v3.2.0"
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions.jvmTarget = "11"
+}
 
 gradlePlugin {
     plugins {
@@ -32,10 +36,6 @@ dependencies {
 
 tasks.test {
     useJUnit()
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "11"
 }
 
 publishing {
